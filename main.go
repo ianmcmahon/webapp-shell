@@ -31,7 +31,7 @@ func sampleForm(rw http.ResponseWriter, req *http.Request) {
 	}
 
 	b := new(bytes.Buffer)
-	if err := renderTemplate(b, "aircraft_form.html", data); err != nil {
+	if err := renderTemplate(b, "sample_form.html", data); err != nil {
 		rw.WriteHeader(http.StatusInternalServerError)
 		rw.Header().Set("Content-Type", "text/plain")
 		rw.Write([]byte(fmt.Sprintf("Something went wrong: %v", err)))
